@@ -6,7 +6,6 @@ for _ in range(N):
     word = input()
     repeat = []
 
-
     for i in range(len(word)):
         if word[i] not in repeat:
             repeat.append(word[i])
