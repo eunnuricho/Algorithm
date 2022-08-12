@@ -1,8 +1,7 @@
 def Fac(num):
-    ans = 1
     if num > 0:
-        ans = num * Fac(num - 1)
-    return ans
+        return num * Fac(num - 1)
+    return 1
 
 N = int(input())
 print(Fac(N))
