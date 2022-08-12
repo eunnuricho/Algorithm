@@ -26,9 +26,9 @@ for tc in range(T):
     if len(ans) > 2:
         # 두 번째 인덱스(차이)로 정렬
         ans.sort(key=lambda x: x[2])
-        print(*ans[0][:2], sep=' ')
+        print(*ans[0][:2])
     else:
-        print(*ans[0][:2], sep=' ')
+        print(*ans[0][:2])
 
 
     # a, b = n // 2, n // 2

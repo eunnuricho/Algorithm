@@ -18,3 +18,7 @@ if len(arr) == 0:
     print(-1)
 else:
     print(sum(arr), min(arr), sep='\n')
+
+#1. 배열을 안써본다
+#2. flag를 안써본다
+#3. 둘 다 안 써본다

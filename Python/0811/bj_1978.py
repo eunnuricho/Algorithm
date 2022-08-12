@@ -8,10 +8,10 @@ for num in nums:
     if num == 1:
         ans -= 1
 
-    for i in range(1, num):
+    for i in range(2, num):
         if num % i == 0:
             cnt += 1
-            if cnt >= 2:
+            if cnt >= 1:
                 ans -= 1
                 break
 
