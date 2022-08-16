@@ -27,9 +27,9 @@ print(*ans)
 #     x, y = map(int, input().split())
 #     people.append((x,y))
 #
-# for i in people:
+# for w1, h1 in people:
 #     rank = 1
-#     for j in people:
-#         if i[0] < j[0] and i[1] < j[1]:
+#     fo:r w2, h2 in people
+#         if w1 < w2 and h1 < h2:
 #             rank+=1
 #     print(rank, end = " ")
