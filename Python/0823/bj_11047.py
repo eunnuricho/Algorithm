@@ -1,3 +1,12 @@
+def cal(_idx):
+    global K, _cnt
+
+    _cnt += (K // nums[_idx])
+    K -= (nums[_idx] * (K // nums[_idx]))
+
+    if K == 0:
+        return _cnt
+
 N, K = map(int, input().split())
 nums = []
 _cnt = 0
@@ -18,11 +27,7 @@ nums.sort(reverse=True)
 
 if not _cnt == 1:
     for i in range(len(nums)):
-        if nums[i] > K:
-            continue
-        if K == 0:
+        if cal(i):
             break
-        _cnt += (K // nums[i])
-        K %= nums[i]
 
 print(_cnt)

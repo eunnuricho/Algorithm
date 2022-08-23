@@ -6,6 +6,7 @@ _stack = []
 for i in range(N):
     _input = sys.stdin.readline().split()
     command = _input[0]
+    print(_input)
 
     if command == 'push':
         _stack.append(_input[1])

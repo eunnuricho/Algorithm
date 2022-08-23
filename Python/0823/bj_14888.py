@@ -29,6 +29,7 @@ def cal(idx, result):
             cal(idx + 1, -((-result) // nums[idx]))
         else:
             cal(idx + 1, result // nums[idx])
+        # cal(idx + 1, int(result / nums[idx]))
         _opr[3] += 1
 
 N = int(input())

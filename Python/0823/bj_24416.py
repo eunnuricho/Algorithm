@@ -1,4 +1,4 @@
-def fib(n):
+def fib(n):     #top-down
     global cnt1
     cnt1 += 1
 
@@ -9,15 +9,15 @@ def fib(n):
         return fib(n - 1) + fib(n - 2)
 
 
-def dp(n):
+def dp(n):      #bottom-up
     global cnt2
 
-    dp = [0] * (n + 1)
-    dp[1], dp[2] = 1, 1
+    _dp = [0] * (n + 1)
+    _dp[1], _dp[2] = 1, 1
 
     for i in range(3, n + 1):
         cnt2 += 1
-        dp[i] = dp[i - 1] + dp[i - 2]
+        _dp[i] = _dp[i - 1] + _dp[i - 2]
     return cnt2
 
 
