@@ -10,6 +10,8 @@ for i in range(N):
     tmp = arr[-1] + nums[i]
     arr.append(tmp)
 
+print(arr)
+
 for j in range(M):
     a, b = map(int, input().split())
     print(arr[b] - arr[a - 1])

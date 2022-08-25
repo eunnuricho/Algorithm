@@ -1,12 +1,12 @@
 def seq(arr, nums):
     if len(arr) == M:
-        print(*arr)
+        print(*sorted(arr))     # 오름차순으로
         return
 
     for i in range(len(nums)):
         if nums[i] not in arr:
             arr.append(nums[i])
-            seq(arr, nums)
+            seq(arr, nums[i + 1:])      # 중복 없이
             arr.pop()
         else:
             continue
