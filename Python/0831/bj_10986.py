@@ -1,7 +1,7 @@
 N, M = map(int, input().split())
 nums = list(map(int, input().split()))
-ls = [0]
-arr = [0]
+ls = []
+arr = []
 
 cnt = 0
 _sum = 0
