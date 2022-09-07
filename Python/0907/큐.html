@@ -1,0 +1,52 @@
+# 1. append(x)
+deq = deque([1, 2, 3])
+deq.append(4)
+>>> deq = [1, 2, 3, 4]
+
+
+# 2. appendleft(x)
+deq = deque([1, 2, 3])
+deq.appendleft(0)
+>>> deq = [0, 1, 2, 3]
+
+
+# append()와 extend()의 차이
+deq.append('def')
+>>> deq = ['a', 'b', 'c', 'def']
+deq.extend('def')
+>>> deq = ['a', 'b', 'c', 'd', 'e', 'f']
+
+
+# 3. extend(i)
+deq = deque(['a', 'b', 'c'])
+deq.extend('de')
+>>> deq = ['a', 'b', 'c', 'd', 'e']
+
+
+# 4. extendleft(i)
+deq = deque(['a', 'b', 'c'])
+deq.extendleft('de')
+>>> deq = ['e', 'd', 'a', 'b', 'c']
+
+
+# 5. pop()
+deq = deque([1, 2, 3])
+deq.pop()
+>>> deq.pop() -> 3
+>>> deq = [1, 2]
+
+
+# 6. popleft()
+deq = deque([1, 2, 3])
+deq.popleft()
+>>> deq.popleft() -> 1
+>>> deq = [2, 3]
+
+
+# 7. rotate(n)
+deq = deque([1, 2, 3, 4, 5])
+deq.rotate(1)
+>>> deq = [5, 1, 2, 3, 4]
+deq = deque([1, 2, 3, 4, 5])
+deq.rotate(-1)
+>>> deq = [2, 3, 4, 5, 1]
