@@ -4,6 +4,7 @@ input = sys.stdin.readline
 
 N = int(input())
 cards = sorted([*map(int, input().split())])
+# cards = sorted(list(map(int, input().split())))
 M = int(input())
 candidate = [*map(int, input().split())]
 

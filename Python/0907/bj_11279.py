@@ -9,11 +9,11 @@ for i in range(N):
     num = int(input())
 
     if num:
-        hq.heappush(heap, (-num, num))      # 제일 큰 값이 0번째 튜플의 두 번째에 위치
+        hq.heappush(heap, -num)      # 제일 큰 값이 0번째 튜플의 두 번째에 위치
 
     else:
         if heap:
-            print(hq.heappop(heap)[1])
+            print(hq.heappop(heap) * -1)
         else:
             print(0)
 
