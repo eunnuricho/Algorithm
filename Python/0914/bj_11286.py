@@ -9,10 +9,7 @@ for i in range(N):
     num = int(input())
 
     if num:
-        if num < 0:
-            hq.heappush(heap, (num * -1, num))      # 절대값, 그냥 값
-        else:
-            hq.heappush(heap, (num, num))
+        hq.heappush(heap, (abs(num), num))
 
 
     else:

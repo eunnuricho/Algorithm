@@ -3,24 +3,29 @@ import sys
 sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline
 
-def dfs(V, cnt):
-    visited[V - 1] = cnt
+def dfs(V):
+    global cnt
+    visited[V] = cnt
+    cnt += 1
     nodes[V].sort()
 
-    for i in range(1, N + 1):
-        if visited[i - 1] == 0 and nodes[V][i] == 1:
-            dfs(i, cnt + 1)
+    for node in nodes[V]:
+        if visited[node] == 0:
+            dfs(node)
 
 
 N, M, R = map(int, input().split())
 
-nodes = [[0] * (N + 1) for _ in range(N + 1)]
-visited = [0] * (N)
+nodes = [[] for _ in range(N + 1)]
+visited = [0] * (N + 1)
 
 for i in range(M):
     a, b = map(int, input().split())
-    nodes[a][b] = nodes[b][a] = 1
+    nodes[a].append(b)
+    nodes[b].append(a)
 
-dfs(R, 1)
+cnt = 1
+dfs(R)
 
+visited.pop(0)
 print(*visited, sep='\n')

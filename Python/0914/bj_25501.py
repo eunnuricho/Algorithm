@@ -11,7 +11,6 @@ def recursion(s, l, r, cnt):
 def isPalindrome(s):
     return recursion(s, 0, len(s)-1, 1)
 
-
 T = int(input())
 
 for _ in range(T):
