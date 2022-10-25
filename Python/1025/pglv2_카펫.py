@@ -1,0 +1,16 @@
+# def solution(brown, yellow):
+#     answer = []
+#     width = 0
+#     length = 0
+#
+#     for i in range(1, 5000):
+#         for j in range(i, 5000):
+#             edge = ((i + j) * 2) - 4
+#             if edge + yellow == i * j:
+#                 width = j
+#                 length = i
+#                 break
+#
+#     answer.append(width)
+#     answer.append(length)
+#     return answer
