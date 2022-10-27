@@ -12,7 +12,7 @@ def solution(s):
             else:
                 new += a
 
-        s = str(bin(int(len(new)))[2:])
+        s = str(bin(len(new))[2:])
 
     answer.append(cnt)
     answer.append(zero)

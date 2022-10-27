@@ -23,3 +23,15 @@ def solution(n, words):
         answer.append(0)
 
     return answer
+
+# def solution(n, words):
+#     cnt = 0
+#     end_word = words[0][0]
+#     check = set()
+#     for word in words:
+#         if word in check or end_word != word[0]:
+#             return [(cnt%n)+1, (cnt//n)+1]
+#         end_word = word[-1]
+#         check.add(word)
+#         cnt += 1
+#     return [0, 0]

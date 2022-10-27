@@ -1,12 +1,16 @@
-# def solution(s):
-#     answer = -1
-#
-#     arr = list(s)
-#     idx = 0
-#     while True:
-#         for i in range(len(arr) - 1):
-#             if arr[i] == arr[i + 1]:
-#                 arr.pop(i)
-#                 arr.pop(i + 1)
-#
-#     return answer
+def solution(s):
+    answer = -1
+    stack = ['0']
+
+    for a in s:
+        if a != stack[-1]:
+            stack.append(a)
+        else:
+            stack.pop()
+
+    if len(stack) > 1:
+        answer = 0
+    else:
+        answer = 1
+
+    return answer
