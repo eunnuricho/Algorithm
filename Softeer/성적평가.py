@@ -57,8 +57,7 @@ for tc in range(3):
 
 for k in range(4):
     ans = ''
-    tmp = sorted(result[k])
-    tmp.reverse()
+    tmp = sorted(result[k], reverse = True)
 
     for l in range(N):
         target = result[k][l]
