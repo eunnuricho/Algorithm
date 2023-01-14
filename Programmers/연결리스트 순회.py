@@ -3,6 +3,7 @@ class Node:
         self.data = item
         self.next = None
 
+
 class LinkedList:
     def __init__(self):
         self.nodeCount = 0
@@ -26,6 +27,7 @@ class LinkedList:
             bins.append(curr.data)
             curr = curr.next
         return bins
+
 
 def solution(x):
     return 0

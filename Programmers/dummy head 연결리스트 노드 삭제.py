@@ -3,13 +3,13 @@ class Node:
         self.data = item
         self.next = None
 
+
 class LinkedList:
     def __init__(self):
         self.nodeCount = 0
         self.head = Node(None)
         self.tail = None
         self.head.next = self.tail
-
 
     def traverse(self):
         result = []
@@ -18,7 +18,6 @@ class LinkedList:
             curr = curr.next
             result.append(curr.data)
         return result
-
 
     def getAt(self, pos):
         if pos < 0 or pos > self.nodeCount:
@@ -32,7 +31,6 @@ class LinkedList:
 
         return curr
 
-
     def insertAfter(self, prev, newNode):
         newNode.next = prev.next
         if prev.next is None:
@@ -41,7 +39,6 @@ class LinkedList:
         self.nodeCount += 1
 
         return True
-
 
     def insertAt(self, pos, newNode):
         if pos < 1 or pos > self.nodeCount + 1:
@@ -53,7 +50,6 @@ class LinkedList:
 
         return self.insertAfter(prev, newNode)
 
-
     def popAfter(self, prev):
         if prev.next == None:
             return None
@@ -61,19 +57,18 @@ class LinkedList:
         if curr.next == None:
             prev.next = None
             self.tail = prev
-        else :
+        else:
             prev.next = curr.next
 
-        self.nodeCount -=1
+        self.nodeCount -= 1
 
         return curr.data
-
 
     def popAt(self, pos):
         if pos < 1 or pos > self.nodeCount:
             raise IndexError
 
-        prev = self.getAt(pos-1)
+        prev = self.getAt(pos - 1)
 
         return self.popAfter(prev)
 
