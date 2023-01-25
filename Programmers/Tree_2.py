@@ -21,8 +21,9 @@ class ArrayQueue:
 
 class Node:
 
-    def __init__(self, item):
-        self.data = item
+    def __init__(self, key, data):
+        self.key = key
+        self.data = data
         self.left = None
         self.right = None
 
@@ -38,7 +39,29 @@ class Node:
             else:
                 self.right = Node(key, data)
         else:
-            raise KeyError('keyerror')
+            raise KeyError('Key %s already exists.' % key)
+
+    def lookup(self, key, parent=None):
+        if key < self.key:
+            if self.left:
+                return self.left.lookup(key, self)
+            else:
+                return None, None
+        elif key > self.key:
+            if self.right:
+                return self.right.lookup(key, self)
+            else:
+                return None, None
+        else:
+            return self, parent
+
+    def countChildren(self):
+        count = 0
+        if self.left:
+            count += 1
+        if self.right:
+            count += 1
+        return count
 
     def inorder(self):
         traversal = []
@@ -78,6 +101,72 @@ class BinaryTree:
             self.root.insert(key, data)
         else:
             self.root = Node(key, data)
+
+    def lookup(self, key):
+        if self.root:
+            return self.root.lookup(key)
+        else:
+            return None, None
+
+    def remove(self, key):
+        node, parent = self.lookup(key)
+        if node:
+            nChildren = node.countChildren()
+            # The simplest case of no children
+            if nChildren == 0:
+
+                if parent:
+                    if node == parent.left:
+                        parent.left = None
+                    else:
+                        parent.right = None
+
+                else:
+                    self.root = None
+            # When the node has only one child
+            elif nChildren == 1:
+
+                if node.left:
+                    tmp = node.left
+                else:
+                    tmp = node.right
+
+                if parent:
+                    if node == parent.left:
+                        parent.left = tmp
+                    else:
+                        parent.right = tmp
+
+                else:
+                    self.root = tmp
+            # When the node has both left and right children
+            else:
+                parent = node
+                successor = node.right
+
+                while successor.left:
+                    parent = successor
+                    successor = successor.left
+                    if successor.key == node.key + 1:
+                        break
+
+                node.key = successor.key
+                node.data = successor.data
+
+                if successor == parent.left:
+                    if successor.right:
+                        parent.left = successor.right
+                    else:
+                        parent.left = None
+                else:
+                    if successor.right:
+                        parent.right = successor.right
+                    else:
+                        parent.right = None
+            return True
+
+        else:
+            return False
 
     def inorder(self):
         if self.root:
