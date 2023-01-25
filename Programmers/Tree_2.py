@@ -18,6 +18,7 @@ class ArrayQueue:
     def peek(self):
         return self.data[0]
 
+
 class Node:
 
     def __init__(self, item):
@@ -25,6 +26,19 @@ class Node:
         self.left = None
         self.right = None
 
+    def insert(self, key, data):
+        if key < self.key:
+            if self.left:
+                self.left.insert(key, data)
+            else:
+                self.left = Node(key, data)
+        elif key > self.key:
+            if self.right:
+                self.right.insert(key, data)
+            else:
+                self.right = Node(key, data)
+        else:
+            raise KeyError('keyerror')
 
     def inorder(self):
         traversal = []
@@ -35,7 +49,6 @@ class Node:
             traversal += self.right.inorder()
         return traversal
 
-
     def preorder(self):
         traversal = []
         traversal.append(self.data)
@@ -44,7 +57,6 @@ class Node:
         if self.right:
             traversal += self.right.preorder()
         return traversal
-
 
     def postorder(self):
         traversal = []
@@ -55,11 +67,17 @@ class Node:
         traversal.append(self.data)
         return traversal
 
+
 class BinaryTree:
 
     def __init__(self, r):
         self.root = r
 
+    def insert(self, key, data):
+        if self.root:
+            self.root.insert(key, data)
+        else:
+            self.root = Node(key, data)
 
     def inorder(self):
         if self.root:
@@ -67,20 +85,17 @@ class BinaryTree:
         else:
             return []
 
-
     def preorder(self):
         if self.root:
             return self.root.preorder()
         else:
             return []
 
-
     def postorder(self):
         if self.root:
             return self.root.postorder()
         else:
             return []
-
 
     def bft(self):
         traversal = []
