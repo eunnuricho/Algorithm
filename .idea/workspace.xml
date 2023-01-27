@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4557242f-6d3d-4f45-957e-4524f970e2c5" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/Programmers/베스트앨범.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Programmers/이중우선순위큐.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Programmers/프린터.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/DoublyLinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/DoublyLinkedList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/Heap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/Heap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/LinkedLIst.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/LinkedLIst.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/Queue_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/Queue_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/Queue_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/Queue_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/Queue_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/Queue_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/Stack_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/Stack_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/Stack_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/Stack_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/Stack_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/Stack_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/Tree_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/Tree_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programmers/Tree_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/자료구조/Tree_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674693784357</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="commit">
+      <created>1674858749685</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674858749685</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
